@@ -11,5 +11,19 @@
 	<button class="btn" onclick="calc()">나이 계산하기</button>
 	<div id="result" class="show">(결과 값 표시)</div>
 
+	<script>
+
+		function calc()
+		{
+			var currentYear = 2020;
+			var birthYear = prompt("태어난 연도를 입력하세요");
+
+			
+			
+			
+			var resultYear = currentYear - birthYear + 1;
+			document.getElementById("result").innerHTML = resultYear;
+		}
+	</script>
 </body>
 </html>

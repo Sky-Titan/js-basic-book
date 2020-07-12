@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>할인 가격 구하기</title>
+	<link rel="stylesheet" href="css/bargain.css">
+
+</head>
+<body>
+    <div id="contents">
+        <img src="images/sale.png">
+        <ul>
+            <li>
+                <label for="origin_price">원래가격</label> 
+                <input id="origin_price" type="text"> 원
+            </li>
+            <li>
+                <label for="percentage">할인율</label> 
+                <input id="percentage" type="text"> %
+            </li>
+            <li>
+                <button onclick="calculate()">할인 가격 계산하기</button>
+            </li>
+        </ul>
+
+        <div id="result">
+
+        </div>
+    </div>
+    
+
+    <script>
+        function calculate()
+        {
+            var percentage = document.querySelector("#percentage").value;
+            var origin_price = document.querySelector("#origin_price").value;
+            var result_price = origin_price * (100-percentage) / 100;
+            document.querySelector("#result").innerHTML = "결과는 "+result_price+" 원 입니다.";
+
+        }
+    </script>
+
+</body>
+
+
+</html>
